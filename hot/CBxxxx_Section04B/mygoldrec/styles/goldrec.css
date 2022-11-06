@@ -1,0 +1,42 @@
+header
+{
+    font-family:'Lucida Sans';
+    text-align: center;
+   ;
+}
+
+footer
+{
+    background-color: #7E5109;
+}
+
+.colo
+{
+    background-color: pink
+    ;
+}
+
+.box1
+{
+    background-color: #7E5109;
+    text-align: center;
+}
+
+body{
+    background-color:#fff77a;   
+}
+
+table th,tr,td
+{
+    border: 1px solid black;
+}
+
+form
+{
+    width: 100%;
+    background-image: url("./assets/1843397.jpg");
+    background-repeat: no-repeat;
+}
+
+
+

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Main page</title>
+
+		<link rel="stylesheet" href="./styles/goldrec.css" />
+	</head>
+	<body>
+		<header>
+			<h1>Gold Recommendation</h1>
+			<span>GOLD BAR (GB) 999.9</span>
+
+			<div class="info">
+				<span>PRICE ON TODAY</span>
+				<time id="datetime">-</time>
+				<time id="day">DAY : -</time>
+			</div>
+		</header>
+
+		<section class="content">
+            <!-- 
+                Using GET request approach to transfer data to other pages
+                ``````````````````````````````````````````````````````````
+                1. Create a form with id="form"
+                2. Assign method="GET" and action="./views/recommend.html"
+                3. Name all the input fields with the same name as the variables
+                4. Write a JS code in in the goldrec.js for the recommend.html file to get the data from the form
+                   refer line #6 to #13 in the goldrec.js to see how to get the data
+                   don't forget to add the JS code to the recommend.html file
+                   <script src="../functions/goldrec.js"></script>
+
+             -->
+			<form class="wrapper" method="GET" action="./views/recommend.html">
+				<table class="table-1">
+					<thead>
+						<tr>
+							<th>GOLD BAR (GB) WEIGHT (gram)</th>
+							<th>PRICE (RINGGIT MALAYSIA)</th>
+						</tr>
+					</thead>
+					<tbody>
+                        <tr>
+                            <td>GB 999.9 (1gm)</td>
+                            <td>
+                                <input class="input-1" type="number"  name="gb1" placeholder="Price in RM" value="280">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>GB 999.9 (5gm)</td>
+                            <td>
+                                <input class="input-1" type="number"  name="gb5" placeholder="Price in RM" value="1375">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>GB 999.9 (10gm)</td>
+                            <td>
+                                <input class="input-1" type="number"  name="gb10" placeholder="Price in RM" value="2729">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>GB 999.9 (20gm)</td>
+                            <td>
+                                <input class="input-1" type="number"  name="gb20" placeholder="Price in RM" value="5438">
+                            </td>
+                        </tr>
+                    </tbody>
+				</table>
+
+				<table class="table-2">
+					<thead>
+						<tr>
+                            <th></th>
+                            <th></th>
+						</tr>
+					</thead>
+					<tbody>
+                        <tr>
+                            <td>Amount of Capital</td>
+                            <td>
+                                <input class="input-1" type="number"  name="cap" placeholder="Amount in RM" min="0" required>
+                            </td>
+                        </tr>
+                    </tbody>
+				</table>
+
+                <div class="buttons">
+                    <button type="submit">Recommend</button>
+                    <button type="reset">Reset</button>
+                </div>
+			</form>
+		</section>
+
+		<footer>
+            <ul>
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#">Privacy</a>
+                </li>
+                <li>
+                    <a href="#">Site map</a>
+                </li>
+                <li>
+                    <a href="#">Link</a>
+                </li>
+            </ul>
+            <p>Copyright 2022; All rights reserved</p>
+        </footer>
+
+        <script>
+            const datetimeElement = document.getElementById('datetime');
+            const dayElement = document.getElementById('day');
+
+            // datetime format yyyy-mm-dd hh:mm:ss
+            const date = new Date();
+            const year = date.getFullYear();
+            const month = date.getMonth() + 1;
+            const day = date.getDate();
+            const hour = date.getHours();
+            const minute = date.getMinutes();
+            const second = date.getSeconds();
+
+            const datetime = `${year}-${month}-${day} ${hour}:${minute}:${second}`;
+            const dayName = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
+            datetimeElement.innerHTML = datetime;
+            dayElement.innerHTML = `DAY : ${dayName[date.getDay()]}`;
+        </script>
+	</body>
+</html>

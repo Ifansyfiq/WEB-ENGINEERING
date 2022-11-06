@@ -1,0 +1,10 @@
+body{
+    width: 600px;   
+    margin: 0 auto; 
+    font-family:Arial;
+    text-align:justify;  
+    background-image: url("images/bg-footer.jpg");
+    background-repeat: repeat-y;
+    background-position: center; 
+}
+                        

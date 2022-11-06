@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+
+    <body>
+        Name: <input type="text" id="name" name="fname">
+        Email: <input type="text" id="email" name="fmail">
+        IC Number: <input type="number" id="ic" name="ic" maxlength="12">
+        <br><br>
+        Other way to get the IC number but you still need to validate its input<br><br>
+        IC Number: <input type="number" id="ic_3" name="ic_3" minlength="4" maxlength="4">
+
+        <!-- buttton-->
+        <button onclick="ValidateForm()">Submit</button><br>
+
+        <p id="output"></p>
+                         
+        <script>
+            let state;
+            
+            function ValidateForm(){
+                var name = document.getElementById("name").value;
+                var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+                if (name == ""){
+                    alert("Name must be filled out");
+                }
+                if (document.getElementById("email").value.match(mailformat))//validate email ikut format or not
+                {
+                    email=document.getElementById("email").value;
+                    //substr(start_position, length)
+                    birth_code=document.getElementById("ic").value.substr(6,2);// ambil no.tengah e.g: 11,01,etc
+                    //conditional statement to determine state based on birth_code. You may use switch.
+                    if (birth_code==11){
+                        state="Terenggannu";
+                    }
+                    else if (birth_code==01){
+                         state="Johor";
+                    }
+                    else
+                    {
+                         state="Others";
+                    }
+
+                    document.getElementById("output").innerHTML="Welcome"+name+"<br>Your email address: "+email+"<br> Your birth code: "+birth_code+"<br>Your state is: "+state;
+
+
+                }
+                else
+                {
+                    alert("You have entered an invalid email addresss!");
+                }
+            }
+        </script>
+    </body>
+</html>

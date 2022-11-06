@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head>
+    <title>form = Question 3(Javascript)</title>
+</head>
+<body>
+    <h1> Input number you want to add</h1>
+    <input type="text" id="text1">
+    <input type="button" id="buton1" value="Add" onclick="add_element();"> <!-- bwat button-->
+    <input type="button" id="buton2" value="Display" onclick="display_array();">
+    <p id="Result"></p>
+    <script>
+        var x=0;
+        var array=new Array();
+
+        function add_element()
+        {
+            array[x]=document.getElementById("text1").value;
+            alert("Element : "+ array[x] + " Added at index  "+ x);
+            x++;
+            document.getElementById("text1").value=""; //slepas isi dlm form diye akan kosongkan balik
+        }
+
+        function display_array()
+        {
+            var e = "<hr>";//hr=line panjang
+
+            for (var y=0; y<array.length; y++)
+            {
+                e += "Element " + y + " = " + array[y] + "<br>";
+            }
+            document.getElementById("Result").innerHTML=e;
+        }
+
+    </script>
+</body>

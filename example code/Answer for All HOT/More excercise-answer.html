@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<title>Your Marks</title>
+<head>
+<img style="absolute : right;"src="ump.png" alt="ump logo">
+</head>
+<body>
+
+<form align="center" name="myform">
+
+<h1>BCS2303 Marks</h1>
+Name
+<input type = "text" name="name">
+Student ID
+<input type = "text" name="customerhp">
+<table border="0" align="center" width=60%>
+<tr>
+ <th>Assessment Type</th>
+ <th>Total Percentage</th>
+ <th>Total Marks</th>
+ <th>Your Marks</th>
+ <th>Percentage</th>
+</tr>
+
+<tr>
+ <td>HOT #1</td>
+ <td>15%</td>
+ <td>60</td>
+ <td><input type="number" name="H1M" id="H1M"></td>
+ <td><input type="number" name="H1P" id="H1P" disabled="disabled"></td>
+</tr>
+<tr>
+ <td>HOT #2</td>
+ <td>10%</td>
+ <td>80</td>
+ <td><input type="number" name="H2M" id="H2M"></td>
+ <td><input type="number" name="H2P" id="H2P" disabled="disabled"></td>
+</tr>
+<tr>
+ <td>Assignment:</td>
+ <td>5%</td>
+ <td>30</td>
+ <td><input type="number" name="AM" id="AM"></td>
+ <td><input type="number" name="AP" id="AP" disabled="disabled"></td>
+</tr>
+<tr>
+ <td>Mini Project</td>
+ <td>30%</td>
+ <td>60</td>
+ <td><input type="number" name="MPM" id="MPM"></td>
+ <td><input type="number" name="MPP" id="MPP" disabled="disabled"></td>
+</tr>
+<tr>
+ <td>Final Exam</td>
+ <td>40%</td>
+ <td>100</td>
+ <td><input type="number" name="FEM" id="FEM"></td>
+ <td><input type="number" name="FEP" id="FEP" disabled="disabled"></td>
+</tr>
+ <td></td>
+ <td></td>
+ <td>Total Marks</td>
+ <td><input type="number" name="TM" id="TM" disabled="disabled"></td>
+ <td></td>
+</tr>
+
+<tr>
+ <td></td>
+ <td></td>
+ <td>Grade</td>
+ <td><input type = "text" name="G1" id="G1" disabled="disabled"></td>
+ <td></td>
+</tr>
+
+</table>
+ <input type = "button" value ="Process" onclick="process()"/>
+ <input type = "button" value ="Reset" onclick="reset()"/>
+</form>
+
+<script>
+function process()
+{
+ var m0 = parseFloat(document.myform.H1M.value);
+ var m1 = parseFloat(document.myform.H2M.value);
+ var m2 = parseFloat(document.myform.AM.value);
+ var m3 = parseFloat(document.myform.MPM.value);
+ var m4 = parseFloat(document.myform.FEM.value);
+ //calcpercentage
+ var pc = [];
+ pc[0]=(m0/60*15);
+ pc[1]=(m1/80*10);
+ pc[2]=(m2/30*5);
+ pc[3]=(m3/60*30);
+ pc[4]=(m4/100*40);
+ 
+ //parsetotable
+ document.getElementById("H1P").value=pc[0];
+ document.getElementById("H2P").value=pc[1];
+ document.getElementById("AP").value=pc[2];
+ document.getElementById("MPP").value=pc[3];
+ document.getElementById("FEP").value=pc[4];
+ //calcttl
+ var ttl = pc[0]+pc[1]+pc[2]+pc[3]+pc[4];
+ document.getElementById("TM").value=ttl;
+ var g;
+ if (ttl<= 40){
+	g = "E";}
+		else if (ttl<50){
+		  g ="D";}
+			else if (ttl<60){
+			  g = "C";}
+				else if (ttl< 70){
+				  g= "B";}
+				    else if (ttl<100) {
+					  g="A";}
+					  else {
+					  g="error";}
+document.getElementById("G1").value=g;
+}
+
+</script>
+</body>

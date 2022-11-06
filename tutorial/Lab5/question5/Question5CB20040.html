@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>form = Question 5(Javascript)</title>
+</head>
+<body onload="myFx()">
+    <h1 style="text-align: center;">Question 5</h1>
+
+    <p id="total"></p>
+    <script>
+        function myFx(){
+            var num1 = window.prompt("enter first integer","");
+            var num2 = window.prompt("enter second integer","");
+            var num3 = prompt("enter third integer","");
+
+            var total = Number(num1)+Number(num2)+Number(num3);
+
+            document.getElementById("total").innerHTML="Total is = "+total;
+        }
+      
+    </script>
+</body>
+</html>

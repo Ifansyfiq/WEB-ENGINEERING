@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>form = Question 3(Javascript)</title>
+    </head>
+    <body>
+        <h1 style="text-align: center;">Question 3</h1>
+       
+        <label>Name : </label>
+        <input type="text" name="name" id="name">
+        <label>Age : </label>
+        <input type="number" name="age" id="age">
+
+        <button type="submit" onclick="output()" >submit</button>
+
+        <p id="display"></p>
+        <script>
+            function output()
+            {
+                var strName = document.getElementById("name").value;
+                var intAge = document.getElementById("age").value;
+                var year = new Date();
+                var born = year.getFullYear()-intAge;
+
+                document.getElementById("display").innerHTML = "Welcome : "+strName+" "+"<br>Your are born in : "+born;
+            }
+        </script>
+    </body>
+</html>

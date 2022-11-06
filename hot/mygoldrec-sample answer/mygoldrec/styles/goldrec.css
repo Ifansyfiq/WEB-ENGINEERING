@@ -1,0 +1,186 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+
+    min-height: 100vh;
+
+    background: #fff77a;
+}
+
+h1 {
+    padding: 20px 0;
+    margin: 0;
+    font-size: 24px;
+
+    text-transform: uppercase;
+}
+
+header {
+    width: 100%;
+    height: fit-content;
+
+    text-align: center;
+
+    padding: 0 10px;
+}
+
+header > span {
+    display: block;
+    font-weight: bold;
+}
+
+.info {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    
+    padding: 5px;
+    margin: 20px 0;
+
+    color: white;
+
+    background: #7E5109;
+}
+
+.content {
+    background-image: url('../assets/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    width: 100%;
+    min-height: 65vh;
+    height: fit-content;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    height: fit-content;
+    width: fit-content;
+
+    background: #e5fbf0;
+
+    padding: 5px;
+}
+
+table {
+    width: 50vw;
+}
+
+.table-2 {
+    margin-top: 20px;
+}
+
+.table-2 thead {
+    height: 10px;
+    background: pink;
+}
+
+
+
+td {
+    width: 50%;
+}
+
+thead, tbody {
+    width: 100%;
+}
+
+
+th, td {
+    border: 1px solid orange;
+}
+
+table > thead {
+    background: #D4AC0D;
+}
+
+.input-1 {
+    width: 100%;
+    text-align: right;
+}
+
+th {
+    padding: 5px;
+}
+
+td {
+    padding: 10px;
+}
+
+tr > td:first-child {
+    font-weight: bold;
+    text-align: center;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+
+    gap: 5px;
+
+    padding: 5px;
+    margin: 10px 0;
+}
+
+button {
+    padding: 15px 20px;
+
+    background: #D4AC0D;
+    border: none;
+
+    color: white;
+    font-weight: bold;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+footer {
+    width: 100%;
+    height: fit-content;
+
+    background: #7E5109;
+
+    padding: 0px 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    color: white;
+}
+
+footer > ul {
+    display: flex;
+
+    gap: 10px;
+
+    list-style-type: none;
+
+    padding: 0;
+}
+
+footer > ul > li::before {
+    content: '|';
+
+    padding-right: 10px;
+}
+
+footer > ul > li:first-child:before {
+    content: '';
+    padding-right: 0px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}

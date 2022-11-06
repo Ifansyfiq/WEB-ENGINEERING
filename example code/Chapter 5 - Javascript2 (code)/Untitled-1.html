@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+     <body>
+ <input type="text" id="status_info" >
+ <input type="button" onclick="check()" value="CheckStatus"> <!-- type=button-->
+
+     </body>
+
+<script>
+ function check(){
+ 
+ 
+    var checking = document.getElementByid("status_info").innerHTML;  /*id value*/
+
+ if( checking == "active"){
+console.log("T");
+ }else if(checking != "not_active"){
+    console.log("F");
+ }else{
+    console.log("Error");
+ }
+ 
+}
+ </script>

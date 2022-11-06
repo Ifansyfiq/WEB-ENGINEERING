@@ -1,0 +1,21 @@
+The value of z is 6
+// z=1 x=5
+The value of z is 12
+// z=6 y=6
+The value of z is 17
+// z=12 x=5
+The value of z is 23
+// z=17 y=6
+
+The value of x is 11
+// x=5 y=6
+The value of y is 17
+// x=11 y=6
+The value of z is 34
+// z=23 x=11
+The value of z is 51
+// z=34 y=17
+The value of z is 62
+// z=51 x=11
+The value of z is 79
+// z=62 y=17

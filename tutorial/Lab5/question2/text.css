@@ -1,0 +1,12 @@
+.h1
+{
+    text-align: center;
+    color: aqua;
+}
+body{
+    width: 600px;   
+    margin: 0 auto; 
+    font-family:Arial;
+    text-align:justify;   
+}
+

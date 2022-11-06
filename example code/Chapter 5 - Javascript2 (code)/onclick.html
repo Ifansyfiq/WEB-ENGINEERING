@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+Home address: <textarea rows="3" cols="20" id="area1"></textarea><br>
+Mailing address: <textarea rows="3" cols="20" id="area2"></textarea><br>
+
+<button onclick="myFunction()">Same address</button>
+
+<p>A function is triggered when the button is clicked. The function copies the text from Home address into Mailing address.</p>
+
+<script>
+function myFunction() {
+    document.getElementById("area2").value = document.getElementById("area1").value;
+}
+</script>
+</body>
+</html>

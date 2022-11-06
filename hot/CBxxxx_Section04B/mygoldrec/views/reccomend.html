@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+       <meta name="viewpoint" content="width-device-width, initial-scale=1.0">
+        <meta author="Irfan Syafiq CB20040"> 
+        <!-- YOUR NAME: MUHAMMAD IRFAN SYAFIQ BIN MOHD BAKHTIAR
+             MATRIC NO. : CB20040
+             LECTURER : DR.AZLIANA
+             HANDS-ON TEST-->
+
+             <link rel="stylesheet" type="text/css" href="styles/goldrec.css">
+             <script src="functions/godlrec.js"></script>
+        <header>Gold recommendation</header>
+        <p style="text-align: center;">GOLD BAR (GB) 999.9</p>
+        
+    </head>
+    <body>
+     <div class="box1">
+         PRICE IN TODAY<br>          
+    </div>
+    <form name="myform" align="center">
+        <div >
+         <table align="center">
+             <tbody>
+                 <tr>
+                     <td>GOLD BAR (GB) WEIGHT (GRAM)</td>
+                     <td>PRICE (RINGGIT MALAYSIA)</td>
+                 </tr>
+                 <tr>
+                    <td>GB 999.99 (1gm)</td>
+                    <td>
+                        <input type="number" name="price_1g" placeholder="Price in RM" style="text-align: right;" >
+                    </td>
+                </tr>
+                <tr>
+                    <td>GB 999.99 (5gm)</td>
+                    <td>
+                        <input type="number" name="price_5g" placeholder="Price in RM" style="text-align: right;">
+                    </td>
+                </tr>
+                <tr>
+                    <td>GB 999.99 (10gm)</td>
+                    <td>
+                        <input type="number" name="price_10g" placeholder="Price in RM" style="text-align: right;">
+                    </td>
+                </tr>
+                <tr>
+                    <td>GB 999.99 (20gm)</td>
+                    <td>
+                        <input type="number" name="price_20g" placeholder="Price in RM" style="text-align: right;">
+                    </td>
+                </tr>
+             </tbody>
+         </table>
+         <table  align="center">
+             <tbody>
+                <tr>
+                    <td> <div class="colo"></div> </td>
+                    <td> <div class="colo"></div></td>
+                </tr>
+                <tr>
+                    <td> Amount of Capital</td>
+                    <td>   <input type="number" name="cap_val" placeholder="Amount of RM" style="text-align: right;"></td>
+                </tr>
+                <td>
+                    <input type="button" onclick="reccomend()" value="reccomend">
+                    <input type="button" onclick="reset()" value="reset">
+                </td>
+             </tbody>
+         </table>
+        </div>
+    </form>
+        <footer>
+            <p style="left: auto;">|Privacy|site Map|Links</p>
+            <p style="right: auto;">Copyright 2022;All Rights Reserved</p>
+        </footer>
+
+        <p id="display"></p>
+    </body>
+</html>

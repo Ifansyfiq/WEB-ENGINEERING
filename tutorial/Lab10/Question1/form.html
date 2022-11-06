@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <form action="readForm.php" method="post">
+        Name:  <input type="text" name="name"><br><br>
+        
+        Age :  <input type="number" name="age"><br><br>
+        
+        Gender: <input type="checkbox" id="gender1" name="gender">
+        <label for="gender1">Male</label>
+        <input type="checkbox" id="gender2" name="gender">
+        <label for="gender2">Female</label><br><br>
+        
+        Title: <input type="checkbox" id="title1" name="title">
+        <label for="title1">Prof</label>
+        <input type="checkbox" id="title2" name="title2">
+        <label for="title2">Dr</label><br><br>
+
+        
+        Hobby: <label for="hobby"></label>  
+            <select id="hobby" name="hobby[]" size="4" multiple>
+              <option value = "reading">reading</option>
+              <option value = "swimming">swimming</option>
+              <option value = "basketball">basketball</option>
+              <option value = "football">football</option>
+            </select><br><br>
+          
+
+          
+            comments: <textarea name="message" rows="10" cols="40"></textarea>
+            <br><br>
+          
+    <input type="submit">
+   
+  </form>
+
+</body>
+</html>

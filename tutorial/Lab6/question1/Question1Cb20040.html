@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>form = Question 2(Javascript)</title>
+        <style>body{line-height: 2;}</style>
+    </head>
+    <body>
+                <h1>Input two numbers and operators</h1>
+
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <label>Number 1</label>
+                            </td>
+                            <td>:</td>
+                            <td>
+                                <input type="number" name="num1" id="num1">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>:</td>
+                            <td>
+                                <select id="operat" name="operat">
+                                    <option value="plus">+</option>
+                                    <option value="minus">-</option>
+                                    <option value="multi">*</option>
+                                    <option value="divide">/</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>Number 2</label>
+                            </td>
+                            <td>:</td>
+                            <td>
+                                <input type="number" name="num2" id="num2">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                            <button type="submit" onclick="output()">Submit</button>     
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <hr style="width: 30%; text-align: left; margin-left: 0%;">
+                <p id="Display"></p>
+        <script>
+           function output()
+           {
+               var num1 = Number(document.getElementById("num1").value);
+               var num2 = Number(document.getElementById("num2").value);
+
+               if (operat = "plus")
+               {
+                   var total = "Total: " + (num1 + num2);    
+               }
+               else if (operat = "minus")
+               {
+                var total = "Total: " + (num1 - num2);
+               }
+               else if (operat == "multi")
+               {
+                var total = "Total: " + (num1 * num2);
+               }
+               else 
+               {
+                var total = "Total: " + (num1 / num2);
+               }
+               return document.getElementById("Display").innerHTML = total;
+           }
+        </script>
+    </body>
+</html>

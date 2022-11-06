@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>form = Question 2(Javascript)</title>
+            
+        </head>
+        <body>
+            <p>sorting array in ascending order</p>
+            <br>
+            <br>
+
+            <p id="output"></p>
+            <p id="output2"></p>
+            <script>
+                var arr1 = [3,8,7,6,5,-4,-3,2,1];
+
+                document.getElementById("output").innerHTML = "Value before sorting :<br>"+arr1;
+                
+                function sortNumber(a,b){
+                    return a-b;
+                }
+            
+             document.write("Value after sorting :<br>"+arr1.sort(sortNumber));
+    
+               
+            </script>
+        </body>
+    </html>

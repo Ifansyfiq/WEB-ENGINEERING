@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<head>
+    <title>Question4 lab6</title>
+</head>
+<body>
+    <h1>Grade</h1>
+    <h2>Enter your mark for each section</h2>
+    <form name="myform">
+    <table border="1">
+        <tbody>
+            <tr>
+                <td>Type</td>
+                <td>Weight</td>
+                <td>Marks</td>
+            </tr>
+            <tr>
+                <td>Homework</td>
+                <td>25%</td>
+                <td>
+                    <input type="number" name="Hwm" id="Hwm">
+                </td>
+            </tr>
+            <tr>
+                <td>Labs</td>
+                <td>20%</td>
+                <td>
+                    <input type="number" name="LabM" id="LabM">
+                </td>
+            </tr>
+            <tr>
+                <td>Midterm</td>
+                <td>25%</td>
+                <td>
+                    <input type="number" name="MidM" id="MidM">
+                </td>
+            </tr>
+            <tr>
+                <td>Final Exam</td>
+                <td>30%</td>
+                <td>
+                    <input type="number" name="FinalM" id="FinalM">
+                </td>
+            </tr>
+            <tr>
+            <td>Your total mark is</td>
+            <td colspan="2" >
+                <input type="number" name="TM" id="TM" disabled>
+            </td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <button type="submit" onclick="output()">Calculate grade</button>
+    </form>
+    <script>
+        function output()
+        {
+            var m0 = parseFloat(document.myform.Hwm.value);
+            var m1 = parseFloat(document.myform.LabM.value);
+            var m2 = parseFloat(document.myform.MidM.value);
+            var m3 = parseFloat(document.myform.FinalM.value);
+
+            var pc = [];
+            pc[0]=(m0/100*25);
+            pc[1]=(m1/100*20);
+            pc[2]=(m2/100*25);
+            pc[3]=(m3/100*30);
+
+            var total = pc[0]+pc[1]+pc[2]+pc[3];
+            document.getElementById("TM").value=total;
+        }
+    </script>
+</body>
